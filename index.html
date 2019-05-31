@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sprite graphic animator plugin Test</title>
+		<script src="js/jquery.min.js"></script>
+        <script src="js/spriteAnimator.js"></script>
+		<style>
+		    * {margin:0px;padding:0px;border:0px}
+		    #testImg {width:335px; height:228px; background:url('images/testImage.png') 0px 0px;}
+		</style>
+		<script type = "text/javascript">
+            $(document).ready(function() {
+                $("#testImg").mouseover(function(){
+				    $(this).spriteAnimator({direction:"forward",frames:40, rows:7, cols:6, fps:30});
+				});
+            });
+        </script> 
+    </head>
+    
+    <body id="index" class="home">
+	    <div id="testImg"></div>
+    </body>
+
+</html>
